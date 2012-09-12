@@ -1,0 +1,12 @@
+[user]
+	name = mironal
+	email = miro.gunp@gmail.com
+[color]
+	ui = auto
+[alias]
+	ch = checkout
+	s = status
+	br = branch
+	m = merge
+[core]
+	editor = vim -c \"set fenc=utf-8\"
