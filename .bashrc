@@ -15,7 +15,9 @@ fi
 
 # User specific aliases and functions
 
-source ~/.nvm/nvm.sh
+if [ -f ~/.nvm/nvm.sh ]; then
+  source ~/.nvm/nvm.sh
+fi
 
 HISTSIZE=50000
 HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
