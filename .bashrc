@@ -22,8 +22,8 @@ fi
 HISTSIZE=50000
 HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
 
-alias la='ls -a'
-alias lla='ls -la'
+alias ll='ls -l --color'
+alias la='ls -la --color'
 
 
 PS1="[\h@\u:\W\$(__git_ps1)]\$ "
