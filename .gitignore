@@ -21,6 +21,7 @@
 .sqlite_history
 .ssh
 .viminfo
+.vim/bundle
 .gitconfig
 app
 bin
@@ -28,4 +29,3 @@ bkup
 doc
 src
 tmp
-
