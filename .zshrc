@@ -4,6 +4,8 @@
 # LANG
 #
 export LANG=ja_JP.UTF-8
+
+source ~/.zsh/git-prompt/zshrc.sh
 ## Default shell configuration
 #
 # set prompt
@@ -15,11 +17,11 @@ case ${UID} in
   PROMPT="%B%{${fg[red]}%}%/#%{${reset_color}%}%b "
   PROMPT2="%B%{${fg[red]}%}%_#%{${reset_color}%}%b "
   SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
-  [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+  [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
     PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}" 
   ;;
 *)
-  PROMPT="%{${fg[red]}%}%/%%%{${reset_color}%} "
+  PROMPT='%{${fg[red]}%}%m%~%{${reset_color}%}$(git_super_status) '
   PROMPT2="%{${fg[red]}%}%_%%%{${reset_color}%} "
   SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
@@ -131,3 +133,14 @@ darwin*)
   ;;
 esac
 
+PATH=$PATH:$HOME/bin
+export PATH
+
+
+#Start tmux on every shell login
+##https://wiki.archlinux.org/index.php/Tmux#Start_tmux_on_every_shell_login
+if which tmux 2>&1 >/dev/null; then
+   #if not inside a tmux session, and if no session is started, start a new session
+   test -z "$TMUX" && (tmux attach || tmux new-session)
+fi
+ 
