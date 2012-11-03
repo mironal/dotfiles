@@ -136,3 +136,4 @@ esac
 PATH=$PATH:$HOME/bin
 export PATH
 
+eval "$(rbenv init -)"

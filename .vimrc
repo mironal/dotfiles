@@ -9,6 +9,7 @@ syntax on
 set hlsearch
 set antialias
 
+set backupdir=~/.vim/tmp
 
 "tab
 set tabstop=4
