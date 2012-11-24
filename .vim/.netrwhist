@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/miro/app/talking_play/app/views/devise'
-let g:netrw_dirhist_2='/home/miro/app/talking_play/app/views/devise/registrations'
-let g:netrw_dirhist_3='/home/miro/app/talking_play/app/views/albums'
-let g:netrw_dirhist_4='/home/miro/app/talking_play'
-let g:netrw_dirhist_5='/Users/miro/Documents/develop/scala/todolist/app/views'
-let g:netrw_dirhist_6='/Users/miro/Documents/develop/scala/todolist/app/controllers'
-let g:netrw_dirhist_7='/Users/miro/Downloads/localboard/Dropboard.app/Contents/Resources/node/node_modules/express/node_modules/send/node_modules/mime'
