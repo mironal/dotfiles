@@ -24,7 +24,6 @@
 .vim/bundle
 .gitconfig
 app
-bin
 bkup
 doc
 src

@@ -53,11 +53,6 @@ let g:neocomplcache_dictionary_filetype_lists = {
     \ 'vim'        : $HOME . '/.vim/dict/vim.dict',
     \ 'vimshell'   : $HOME . '/.vimshell/command-history',
     \ }
-map <C-g> :Gtags
-map <C-f> :Gtags -f %<CR>
-map <C-j> :GtagsCursor<CR>
-map <C-n> :cn<CR>
-map <C-p> :cp<CR>
 
 set nocompatible
 filetype off
