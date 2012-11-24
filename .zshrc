@@ -5,8 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="muse"
-
+ZSH_THEME="sorin"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -32,6 +31,34 @@ ZSH_THEME="muse"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+
+alias where="command -v"
+alias j="jobs -l"
+case "${OSTYPE}" in
+freebsd*|darwin*)
+  alias ls="ls -G -w -h"
+  ;;
+linux*)
+  alias ls="ls --color -h"
+  ;;
+esac
+
+alias la="ls -al"
+alias lf="ls -F"
+alias ll="ls -l"
+alias du="du -h"
+alias df="df -h"
+alias su="su -l"
+
+case "${OSTYPE}" in
+darwin*)
+    export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+    alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    ;;
+esac
+
 
 # Customize to your needs...
 
