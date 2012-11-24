@@ -10,3 +10,4 @@ touch $HOME/.my_zshrc
 cp bin/tmuxx $HOME/bin/
 cp bin/reattach-to-user-namespace $HOME/bin
 
+cp -r .vim ~/.vim
