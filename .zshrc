@@ -32,6 +32,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+
+setopt nolistbeep
+
+# alias
 case "${OSTYPE}" in
     freebsd*|darwin*)
         if [ -f ~/dotfiles/.zshrc.mac ]; then
