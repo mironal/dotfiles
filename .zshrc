@@ -32,17 +32,21 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+case "${OSTYPE}" in
+    freebsd*|darwin*)
+        if [ -f ~/dotfiles/.zshrc.mac ]; then
+            source ~/dotfiles/.zshrc.mac
+        fi
+        ;;
+    linux*)
+        if [ -f ~/dotfiles/.zshrc.linux ]; then
+            source ~/dotfiles/.zshrc.linux
+        fi
+        ;;
+esac
 
 alias where="command -v"
 alias j="jobs -l"
-case "${OSTYPE}" in
-freebsd*|darwin*)
-  alias ls="ls -G -w -h"
-  ;;
-linux*)
-  alias ls="ls --color -h"
-  ;;
-esac
 
 alias la="ls -al"
 alias lf="ls -F"
@@ -50,14 +54,6 @@ alias ll="ls -l"
 alias du="du -h"
 alias df="df -h"
 alias su="su -l"
-
-case "${OSTYPE}" in
-darwin*)
-    export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-    alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-    alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-    ;;
-esac
 
 
 # Customize to your needs...
