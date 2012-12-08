@@ -150,7 +150,7 @@ endif
 
 " Programming {{{
   " quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
-  NeoBundle 'thinca/vim-quickrun'
+  "NeoBundle 'thinca/vim-quickrun'
 
   " perldocやphpmanual等のリファレンスをvim上で見る
   "NeoBundle 'thinca/vim-ref'
@@ -212,7 +212,7 @@ endif
   NeoBundle 'eagletmt/ghcmod-vim'
 
   " syntax checking plugins exist for eruby, haml, html, javascript, php, python, ruby and sass.
-  NeoBundle 'scrooloose/syntastic'
+  "NeoBundle 'scrooloose/syntastic'
 " }}}
 
 " Buffer {{{
