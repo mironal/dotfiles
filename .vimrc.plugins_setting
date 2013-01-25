@@ -12,13 +12,13 @@
 " MiniBufExplorer
 "------------------------------------
 "set minibfexp
-"let g:miniBufExplMapWindowNavVim=1 "hjklで移動
-"let g:miniBufExplSplitBelow=0  " Put new window above
-"let g:miniBufExplMapWindowNavArrows=1
-"let g:miniBufExplMapCTabSwitchBufs=1
-"let g:miniBufExplModSelTarget=1
-"let g:miniBufExplSplitToEdge=1
-"let g:miniBufExplMaxSize = 10
+let g:miniBufExplMapWindowNavVim=1 "hjklで移動
+let g:miniBufExplSplitBelow=0  " Put new window above
+let g:miniBufExplMapWindowNavArrows=1
+let g:miniBufExplMapCTabSwitchBufs=1
+let g:miniBufExplModSelTarget=1
+let g:miniBufExplSplitToEdge=1
+let g:miniBufExplMaxSize = 10
 
 ":MtでMiniBufExplorerの表示トグル
 "command! Mt :TMiniBufExplorer
@@ -33,7 +33,7 @@ let g:Align_xstrlen = 3
 " VTreeExplorer
 "------------------------------------
 " 縦に表示する
-"let g:treeExplVertical=1
+let g:treeExplVertical=1
 
 "------------------------------------
 " NERD_commenter.vim
@@ -119,31 +119,31 @@ let g:Align_xstrlen = 3
 " BufExplorer
 "------------------------------------
 "<Leader>l<Space>でBufferList
-"nnoremap <Leader>l<Space> :BufExplorer<CR>
+nnoremap <Leader>l<Space> :BufExplorer<CR>
 
 "------------------------------------
 " VTreeExplorer
 "------------------------------------
-"let g:treeExplVertical=1
+let g:treeExplVertical=1
 "<Leader>t<Space>でディレクトリツリー表示
-"noremap <Leader>t<Space> :VSTreeExplore<CR>
+noremap <Leader>t<Space> :VSTreeExplore<CR>
 "分割したウィンドウのサイズ
-"let g:treeExplWinSize=30
+let g:treeExplWinSize=30
 
 "------------------------------------
 " DumbBuf.vim
 "------------------------------------
 "<Leader>b<Space>でBufferList
-"let dumbbuf_hotkey = '<Leader>b<Space>'
-"let dumbbuf_mappings = {
-"    \ 'n': {
-"        \'<Esc>': { 'opt': '<silent>', 'mapto': ':<C-u>close<CR>' }
-"    \}
-"\}
-"let dumbbuf_single_key  = 1
-"let dumbbuf_updatetime  = 1    " &updatetimeの最小値
-"let dumbbuf_wrap_cursor = 0
-"let dumbbuf_remove_marked_when_close = 1
+let dumbbuf_hotkey = '<Leader>b<Space>'
+let dumbbuf_mappings = {
+    \ 'n': {
+        \'<Esc>': { 'opt': '<silent>', 'mapto': ':<C-u>close<CR>' }
+    \}
+\}
+let dumbbuf_single_key  = 1
+let dumbbuf_updatetime  = 1    " &updatetimeの最小値
+let dumbbuf_wrap_cursor = 0
+let dumbbuf_remove_marked_when_close = 1
 
 "------------------------------------
 " vim-indent-guides

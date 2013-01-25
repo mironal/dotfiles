@@ -150,7 +150,7 @@ endif
 
 " Programming {{{
   " quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
-  "NeoBundle 'thinca/vim-quickrun'
+  NeoBundle 'thinca/vim-quickrun'
 
   " perldocやphpmanual等のリファレンスをvim上で見る
   "NeoBundle 'thinca/vim-ref'
@@ -168,7 +168,7 @@ endif
   "NeoBundle 'Pydiction'
 
   " ソースコード上のメソッド宣言、変数宣言の一覧を表示
-  "NeoBundle 'taglist.vim'
+  NeoBundle 'taglist.vim'
 
   " エラーがある場所をhilight
   "NeoBundle 'errormarker.vim'
@@ -217,16 +217,16 @@ endif
 
 " Buffer {{{
   " DumbBuf.vim : quickbufっぽくbufferを管理。 "<Leader>b<Space>でBufferList
-  "NeoBundle 'DumbBuf'
+  NeoBundle 'DumbBuf'
 
   " minibufexpl.vim : タブエディタ風にバッファ管理ウィンドウを表示
-  "NeoBundle 'minibufexpl.vim'
+  NeoBundle 'minibufexpl.vim'
 
   " NERDTree : ツリー型エクスプローラ
-  "NeoBundle 'The-NERD-tree'
+  NeoBundle 'The-NERD-tree'
 
   " vtreeexplorer.vim : ツリー状にファイルやディレクトリの一覧を表示
-  "NeoBundle 'vtreeexplorer'
+  NeoBundle 'vtreeexplorer'
 " }}}
 
 
