@@ -71,3 +71,6 @@ fi
 
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 
+if [ -e ~/.nvm/nvm.sh ];then
+    source ~/.nvm/nvm.sh
+fi
