@@ -69,3 +69,5 @@ if [ -f ~/.my_zshrc ]; then
   source ~/.my_zshrc
 fi
 
+export JAVA_OPTS="-Dfile.encoding=UTF-8"
+
