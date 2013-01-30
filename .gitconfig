@@ -14,3 +14,7 @@
 	quotepath = false
 [push]
 	default = simple
+[merge]
+	ff = false
+[pull]
+	rebase = true
