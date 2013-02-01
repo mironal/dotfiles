@@ -30,8 +30,6 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
 
 setopt nolistbeep
 
@@ -65,8 +63,8 @@ alias su="su -l"
 
 # Customize to your needs...
 
-if [ -f ~/.my_zshrc ]; then
-  source ~/.my_zshrc
+if [ -f ~/.zsh_local ]; then
+  source ~/.zsh_local
 fi
 
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
