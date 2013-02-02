@@ -35,7 +35,7 @@ source $ZSH/oh-my-zsh.sh
 setopt nolistbeep
 
 HISTSIZE=1000000
-SAVEHIST=100000
+SAVEHIST=1000000
 
 # alias
 case "${OSTYPE}" in
