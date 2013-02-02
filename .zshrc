@@ -30,6 +30,7 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
 
 setopt nolistbeep
 
