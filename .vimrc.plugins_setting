@@ -402,8 +402,12 @@ let g:quickrun_config.markdown = {
       \ 'cmdopt'    : '-a',
       \ 'args'      : 'Marked',
       \ 'exec'      : '%c %o %a %s',
-      \ }
-
+      \}
+let g:quickrun_config.html = {
+      \ 'outputter' : 'null',
+      \ 'command'   : 'open',
+      \ 'exec'      : '%c %s',
+      \}
 "------------------------------------
 " Pydiction
 "------------------------------------
