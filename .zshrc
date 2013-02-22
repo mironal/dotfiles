@@ -73,3 +73,16 @@ export JAVA_OPTS="-Dfile.encoding=UTF-8"
 if [ -e ~/.nvm/nvm.sh ];then
     source ~/.nvm/nvm.sh
 fi
+
+
+# コマンドラインスタックを表示させる&C-qでやる
+show_buffer_stack() {
+POSTDISPLAY="
+stack: $LBUFFER"
+zle push-line-or-edit
+}
+zle -N show_buffer_stack
+setopt noflowcontrol
+bindkey '^Q' show_buffer_stack
+
+
