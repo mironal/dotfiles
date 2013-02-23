@@ -12,9 +12,16 @@
 	editor = vim -c \"set fenc=utf-8\"
 	precomposeunicode = true
 	quotepath = false
+	excludesfile = /Users/miro/.gitignore_global
 [push]
 	default = simple
 [merge]
 	ff = false
 [pull]
 	rebase = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
