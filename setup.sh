@@ -21,3 +21,4 @@ freebsd*|darwin*)
     echo "alias tml='tmux list-window'" >> ~/.bashrc
   ;;
 esac
+
