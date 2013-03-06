@@ -12,3 +12,14 @@ let g:neobundle_default_git_protocol='https'
 CentOSでtmuxをインストールするときはソースコードからビルドすると
 依存関係の解決がダルいのでRPMfoegeでやったほうが楽.
 
+
+taglist.vimをscalaでも使えるようにする.
+
+taglist.vimを編集
+
+let s:tlist_def_scala_settings = 'scala;t:trait;c:class;T:type;' .
+\ 'm:method;C:constant;l:local;p:package;o:object'
+を追加する
+
+mac標準のctagsだとダメなのでbrew isntall ctagsして, 標準のctagsはctags.bkとかにリネームしておく.
+標準のctagsはwhich ctagsで探す.
