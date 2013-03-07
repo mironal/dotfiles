@@ -288,6 +288,8 @@ endif
   " A framework to read/write fake:path
   "NeoBundle 'kana/vim-metarw'
 
+  " https://github.com/airblade/vim-gitgutter
+  NeoBundle 'airblade/vim-gitgutter'
 " }}}
 
 " ColorSchema{{{{
