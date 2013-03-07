@@ -71,9 +71,12 @@ fi
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 
 if [ -e ~/.nvm/nvm.sh ];then
-    source ~/.nvm/nvm.sh
+  source ~/.nvm/nvm.sh
 fi
 
+if [ -e ~/dotfiles/zsh-completions/src ];then
+  fpath=(~/dotfiles/zsh-completions/src $fpath)
+fi
 
 # コマンドラインスタックを表示させる&C-qでやる
 show_buffer_stack() {
