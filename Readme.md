@@ -51,3 +51,12 @@ CentOSでtmuxをインストールするときはソースコードからビル�
 
 でも、古いやつだとオプションが一部の設定が使えなかったりするので、そういう時は頑張る.
 
+
+# zsh-completions
+
+zsh-completionsはサブモジュールとして登録してあるので、cloneした後にリポジトリのルートディレクトリで
+```sh
+git submodule init
+git submodule update
+```
+する.
