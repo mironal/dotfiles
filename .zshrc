@@ -89,4 +89,5 @@ zle -N show_buffer_stack
 setopt noflowcontrol
 bindkey '^Q' show_buffer_stack
 
-
+export PATH=$PATH:/usr/local/share/npm/bin
+alias gtoday="git log --after=\"`date '+%Y-%m-%d'` 0:0\" --oneline --author=mironal --branches *"
