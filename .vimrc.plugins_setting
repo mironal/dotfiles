@@ -49,8 +49,8 @@ let g:treeExplVertical=1
 " grep.vim
 "------------------------------------
 " 検索外のディレクトリ、ファイルパターン
-"let Grep_Skip_Dirs = '.svn .git .hg'
-"let Grep_Skip_Files = '*.bak *~'
+let Grep_Skip_Dirs = '.svn .git .hg'
+let Grep_Skip_Files = '*.bak *~'
 
 "------------------------------------
 " surround.vim
@@ -472,3 +472,7 @@ let g:quickrun_config.html = {
 "------------------------------------
 "let g:metarw_redmine_server = 'http://redmine.dev.scaleout.jp'
 "let g:metarw_redmine_apikey = '2ed945f405865ec799ff91b7bb364215f932c51c'
+"
+
+
+
