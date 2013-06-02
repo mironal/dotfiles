@@ -13,11 +13,21 @@ abbr         {-# LANGUAGE ... #-}
 # hard-tab is necessary
 snippet      case
 abbr         case ... of
-	case ${1} of
-		${2} -> ${0}
+  case ${1} of
+    ${2} -> ${0}
 
 snippet      main
 abbr         main = do
   main = do
     ${0}
+
+snippet     f1
+abbr        function :: a -> b
+  ${1:function name} :: ${2:type} -> ${3:type}
+  $1 ${4:arg} =  ${0:TARGET}
+
+snippet     f2
+abbr        function :: a -> b -> c
+  ${1:function name} :: ${2:type} -> ${3:type} -> ${4:type}
+  $1 ${0:TARGET}
 
