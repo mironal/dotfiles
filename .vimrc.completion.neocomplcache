@@ -136,10 +136,8 @@ let g:rsenseHome = expand('~/src/rsense-0.3')
 
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
-
-
 " snippet
-let g:neosnippet#snippets_directory = '~/dotfiles/vim-snippets/snippets'
+let g:neosnippet#snippets_directory = '~/dotfiles/snippets'
 
 " Plugin key-mappings.  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
