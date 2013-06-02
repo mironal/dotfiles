@@ -79,6 +79,14 @@ if [ -e ~/dotfiles/zsh-completions/src ];then
   fpath=(~/dotfiles/zsh-completions/src $fpath)
 fi
 
+if [ -e ~/.cabal/bin ];then
+    export PATH=$PATH:~/.cabal/bin
+fi
+
+if [ -e /usr/local/share/npm/bin ];then
+    export PATH=$PATH:/usr/local/share/npm/bin
+fi
+
 # コマンドラインスタックを表示させる&C-qでやる
 show_buffer_stack() {
 POSTDISPLAY="
@@ -89,5 +97,4 @@ zle -N show_buffer_stack
 setopt noflowcontrol
 bindkey '^Q' show_buffer_stack
 
-export PATH=$PATH:/usr/local/share/npm/bin
 alias gtoday="git log --after=\"`date '+%Y-%m-%d'` 0:0\" --oneline --author=mironal --branches *"
