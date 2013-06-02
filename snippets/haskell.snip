@@ -20,14 +20,43 @@ snippet      main
 abbr         main = do
   main = do
     ${0}
+snippet     f
+abbr        function taget
+  ${1:function name} ${0:TARGET}
+
+snippet     f0
+abbr        function :: a
+  ${1:function name} :: ${2:result}
+  $1 = ${0:TARGET}
+
+snippet     ff0
+abbr        function :: (Class a) => a
+  ${1:function name} :: (${1:Class} ${2:name}) => ${3:result}
+  $1 = ${0:TARGET}
 
 snippet     f1
 abbr        function :: a -> b
-  ${1:function name} :: ${2:type} -> ${3:type}
-  $1 ${4:arg} =  ${0:TARGET}
+  ${1:function name} :: ${2:type} -> ${3:result}
+  $1 ${0:TARGET}
+
+snippet     ff1
+abbr        function :: (Class a) => a -> b
+  ${1:function name} :: (${2:Class} ${3:name}) => ${4:arg1} -> ${5:result}
+  $1 ${0:TARGET}
 
 snippet     f2
 abbr        function :: a -> b -> c
-  ${1:function name} :: ${2:type} -> ${3:type} -> ${4:type}
+  ${1:function name} :: ${2:type} -> ${3:type} -> ${4:result}
   $1 ${0:TARGET}
+
+snippet     ff2
+abbr        function :: (Class a) => a -> b -> c
+  ${1:function name} :: (${2:Class} ${3:name}) => ${4:arg1} -> ${5:arg2} -> ${6:result}
+  $1 ${0:TARGET}
+
+snippet     f3
+abbr        function :: a -> b -> c -> d
+  ${1:function name} :: ${2:type} -> ${3:type} -> ${4:type} -> ${5:result}
+  $1 ${0:TARGET}
+
 
