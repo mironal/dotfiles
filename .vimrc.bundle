@@ -174,10 +174,10 @@ endif
   "NeoBundle 'errormarker.vim'
 
   " tagsを利用したソースコード閲覧・移動補助機能 tagsファイルの自動生成
-  " NeoBundle 'Source-Explorer-srcexpl.vim'
+  NeoBundle 'Source-Explorer-srcexpl.vim'
 
   " NERD_tree, taglist, srcexpl の統合
-  " NeoBundle 'trinity.vim'
+  NeoBundle 'trinity.vim'
 " }}}
 "
 " Syntax {{{
@@ -234,13 +234,13 @@ endif
 
 
 " Encording {{{
-  "NeoBundle 'banyan/recognize_charcode.vim'
+  NeoBundle 'banyan/recognize_charcode.vim'
 " }}}
 
 " Utility {{{
 
   " vimshell : vimのshell
-  "NeoBundle 'Shougo/vimshell.git'
+  NeoBundle 'Shougo/vimshell.git'
 
   " vimproc : vimから非同期実行。vimshelleで必要
   NeoBundle 'Shougo/vimproc', {
@@ -262,7 +262,7 @@ endif
   "NeoBundle 'tyru/urilib.vim'
 
   " ステータスラインに顔文字を表示
-  " NeoBundle 'mattn/hahhah-vim'
+  "NeoBundle 'mattn/hahhah-vim'
 
   " utillity
   "NeoBundle 'L9'
@@ -271,7 +271,7 @@ endif
   "NeoBundle 'thinca/vim-openbuf'
 
   " vimdoc 日本語
-  "NeoBundle 'yuroyoro/vimdoc_ja'
+  NeoBundle 'yuroyoro/vimdoc_ja'
 
   " vim上のtwitter client
   "NeoBundle 'TwitVim'
