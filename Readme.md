@@ -55,6 +55,11 @@ mac環境はここの手順でインスコ
 
 http://qiita.com/items/ab70f914a6a577e25d70
 
+macはクリップボードにコピーできなくなる問題を解決するためにreattach-to-user-namespaceをbrewでインスコ.
+
+brew install reattach-to-user-namespace --wrap-pbcopy-pbpaste && brew link reattach-to-user-namespace
+
+
 # zsh-completions
 
 zsh-completionsはサブモジュールとして登録してあるので、cloneした後にリポジトリのルートディレクトリで
