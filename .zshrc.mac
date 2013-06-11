@@ -4,14 +4,3 @@ export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
-# macでtmuxを使うときにはreattach-to-user-namespaceを実行しなくてはいけないが
-# .tmux.confのif-shellとdefault-commandを使うと一つ目のpaneに適用されない.
-# これはtmuxのif-shellが非同期に実行されるため、if-shellで実行されたコマンドの結果が
-# 取得される前に一つ目のpaneが生成されてしまい、default-commandが適用されないためである.
-# よってtmux起動直後の一つ目にpaneの場合にのみzshに寄ってreattach-to-user-namespaceを実行する.
-# $SHLVLを見ているのは一つ目のpane($TMUX_PANE = %0で無限ループに陥らないようにするためである.
-# 以下の条件式は"OSがDarwin"で"tmuxが起動していて"、"現在のpaneが一つ目"で"シェルの深さが2"であることを
-# 確認している.シェルの深さが2とはログインシェルが1でtmuxで起動されたzshシェルが2になるからである.
-if [ `uname` = "Darwin" ] && [ -n "$TMUX" ] && [ $TMUX_PANE = "%0" ] && [ $SHLVL = 2 ];then
-    which reattach-to-user-namespace > /dev/null && reattach-to-user-namespace -l zsh
-fi
