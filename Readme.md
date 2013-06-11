@@ -51,9 +51,6 @@ CentOSでtmuxをインストールするときはソースコードからビル�
 
 でも、古いやつだとオプションが一部の設定が使えなかったりするので、そういう時は頑張る.
 
-mac環境はここの手順でインスコ
-
-http://qiita.com/items/ab70f914a6a577e25d70
 
 macはクリップボードにコピーできなくなる問題を解決するためにreattach-to-user-namespaceをbrewでインスコ.
 
