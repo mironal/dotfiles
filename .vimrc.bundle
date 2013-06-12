@@ -173,6 +173,9 @@ endif
   " エラーがある場所をhilight
   "NeoBundle 'errormarker.vim'
 
+  " NERDTree : ツリー型エクスプローラ
+  NeoBundle 'The-NERD-tree'
+
   " tagsを利用したソースコード閲覧・移動補助機能 tagsファイルの自動生成
   NeoBundle 'vim-scripts/SrcExpl'
 
@@ -229,8 +232,6 @@ endif
   " minibufexpl.vim : タブエディタ風にバッファ管理ウィンドウを表示
   NeoBundle 'minibufexpl.vim'
 
-  " NERDTree : ツリー型エクスプローラ
-  NeoBundle 'The-NERD-tree'
 
   " vtreeexplorer.vim : ツリー状にファイルやディレクトリの一覧を表示
   " NeoBundle 'vtreeexplorer'
