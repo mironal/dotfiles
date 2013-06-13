@@ -40,7 +40,7 @@ endif
   "NeoBundle 'h1mesuke/vim-alignta'
 
   " YankRing.vim : ヤンクの履歴を管理し、順々に参照、出力できるようにする
-  "NeoBundle 'YankRing.vim'
+  NeoBundle 'YankRing.vim'
 
   " undo履歴を追える (need python support)
   "NeoBundle 'Gundo'
@@ -170,6 +170,9 @@ endif
   " ソースコード上のメソッド宣言、変数宣言の一覧を表示
   NeoBundle 'taglist.vim'
 
+  " ファイルを超えてタグジャンブ
+  NeoBundle 'vim-scripts/tagexplorer.vim'
+
   " エラーがある場所をhilight
   "NeoBundle 'errormarker.vim'
 
@@ -230,7 +233,7 @@ endif
   NeoBundle 'DumbBuf'
 
   " minibufexpl.vim : タブエディタ風にバッファ管理ウィンドウを表示
-  NeoBundle 'minibufexpl.vim'
+  "NeoBundle 'minibufexpl.vim'
 
 
   " vtreeexplorer.vim : ツリー状にファイルやディレクトリの一覧を表示

@@ -6,7 +6,7 @@
 " YankRing.vim
 "------------------------------------
 " Yankの履歴参照
-"nmap ,y ;YRShow<CR>
+nmap ,y ;YRShow<CR>
 
 "------------------------------------
 " MiniBufExplorer
@@ -176,7 +176,7 @@ let dumbbuf_remove_marked_when_close = 1
 " taglist.Vim
 "------------------------------------
 " 関数一覧
-"set tags=tags
+set tags=tags
 "set tags+=~/.tags
 "let Tlist_Ctags_Cmd = '/Applications/MacVim.app/Contents/MacOS/ctags' " ctagsのパス
 let Tlist_Show_One_File = 1               " 現在編集中のソースのタグしか表示しない
