@@ -184,6 +184,8 @@ endif
 
   " NERD_tree, taglist, srcexpl の統合
   NeoBundle 'vim-scripts/Trinity'
+
+  NeoBundle 'kien/ctrlp.vim'
 " }}}
 "
 " Syntax {{{
