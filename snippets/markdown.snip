@@ -65,3 +65,18 @@ abbr `code`
 options word
     \`${1}\`${2}
 
+
+snippet mcode
+abbr `code`
+options word
+  \`\`\`${1:lang}
+  ${0:code}
+  \`\`\`
+
+
+
+snippet slide
+abbr    !SLIDE
+  !SLIDE
+
+  ${0}
