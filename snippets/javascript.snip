@@ -67,3 +67,14 @@ options word
 snippet setTimeout-function
 options head
   setTimeout(function() {${0}}, ${1:10});
+
+snippet     setInterval-function
+abbr        setInterval
+options     head
+  setInterval(function() {${0}, ${1:10}});
+
+snippet     log
+abbr        console.log
+options     head
+  console.log(${0});
+
