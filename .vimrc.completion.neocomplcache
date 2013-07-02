@@ -24,6 +24,9 @@ let g:neocomplcache_enable_auto_select = 1
 "ポップアップメニューで表示される候補の数。初期値は100
 let g:neocomplcache_max_list = 20
 
+" insertモード時にカーソルキーで移動した時に補完が出まくるのを抑制する
+let g:neocomplcache_enable_insert_char_pre = 1
+
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
     \ 'default' : '',

@@ -111,3 +111,12 @@ endfunction
 
 " insert mode でjjでesc
 inoremap jj <Esc>
+
+" insertモードの時にカーソルキーで移動できるようにする
+" やらないとAAAAAとかになる
+" http://d.hatena.ne.jp/itchyny/20130624/1372059268
+nnoremap OA gi<Up>
+nnoremap OB gi<Down>
+nnoremap OC gi<Right>
+nnoremap OD gi<Left>
+
