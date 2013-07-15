@@ -90,6 +90,12 @@ if [ -e /usr/local/share/npm/bin ];then
     export PATH=$PATH:/usr/local/share/npm/bin
 fi
 
+if [ -e ~/dotfiles/svm/svm ];then
+    export PATH=$PATH:~/dotfiles/svm
+    export SCALA_HOME=~/.svm/current/rt
+    export PATH=$SCALA_HOME/bin:$PATH
+fi
+
 # コマンドラインスタックを表示させる&C-qでやる
 show_buffer_stack() {
 POSTDISPLAY="
