@@ -96,6 +96,11 @@ if [ -e ~/dotfiles/svm/svm ];then
     export PATH=$SCALA_HOME/bin:$PATH
 fi
 
+if [ -e ~/dotfiles/z/z.sh ];then
+    _Z_CMD=j
+    source ~/dotfiles/z/z.sh
+fi
+
 # コマンドラインスタックを表示させる&C-qでやる
 show_buffer_stack() {
 POSTDISPLAY="
