@@ -52,10 +52,10 @@ endif
   "NeoBundle 'smartchr'
 
   " vim-operator-user : 簡単にoperatorを定義できるようにする
-  "NeoBundle 'operator-user'
+  NeoBundle 'operator-user'
 
   " operator-camelize : camel-caseへの変換
-  "NeoBundle 'operator-camelize'
+  NeoBundle 'operator-camelize'
 
   " operator-replace : yankしたものでreplaceする
   "NeoBundle 'operator-replace'
@@ -259,6 +259,9 @@ endif
       \    },
       \ }
 
+  " renamer.vim : ファイルのリネームを一括で行うにくいやつ
+  NeoBundle 'renamer.vim'
+
   " vim-altercmd : Ex command拡張
   "NeoBundle 'tyru/vim-altercmd'
 
@@ -293,7 +296,9 @@ endif
   NeoBundle 'tpope/vim-fugitive'
 
   " ステータスラインをカッコよくする
-  NeoBundle 'Lokaltog/vim-powerline'
+  " NeoBundle 'Lokaltog/vim-powerline'
+
+  NeoBundle 'bling/vim-airline'
 
   " Redmine on Vim
   "NeoBundle 'mattn/vim-metarw-redmine'

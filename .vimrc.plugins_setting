@@ -222,8 +222,8 @@ let g:SrcExpl_GoBackMapKey  = "<C-b>"   " 戻る機能のMAP
 " operator-camelize.vim
 "------------------------------------
 " camel-caseへの変換
-"map <Leader>u <Plug>(operator-camelize)
-"map <Leader>U <Plug>(operator-decamelize)
+map <Leader>u <Plug>(operator-camelize)
+map <Leader>U <Plug>(operator-decamelize)
 
 "------------------------------------
 " operator-replace.vim
@@ -387,21 +387,35 @@ let g:SrcExpl_GoBackMapKey  = "<C-b>"   " 戻る機能のMAP
 " quickrun.vim
 "------------------------------------
 let g:quickrun_config = {}
-let g:quickrun_config._ = {'runner' : 'vimproc'}
+" let g:quickrun_config._ = {'runner' : 'vimproc'}
+
+" デフォルトの設定
+" 非同期で実行
+" 出力先
+" エラー : quickfix
+" 成功   : buffer
+let g:quickrun_config["_"] = {
+      \ "runner/vimproc/updatetime" : 80,
+      \ "outputter/buffer/split" : ":rightbelow 8sp",
+      \ "outputter/error/error" : "buffer",
+      \ "outputter/error/success" : "null",
+      \ "outputter" : "error",
+      \ "runner" : "vimproc",
+      \ }
 let g:quickrun_config['rspec/bundle'] = {
-  \ 'type': 'rspec/bundle',
-  \ 'command': "rspec",
-  \ 'cmdopt': "-l %{line('.')}",
-  \ 'exec': "bundle exec %c %o %s ",
-  \ 'filetype': 'rspec-result'
-  \}
+      \ 'type': 'rspec/bundle',
+      \ 'command': "rspec",
+      \ 'cmdopt': "-l %{line('.')}",
+      \ 'exec': "bundle exec %c %o %s ",
+      \ 'filetype': 'rspec-result'
+      \}
 let g:quickrun_config['rspec/normal'] = {
-  \ 'type': 'rspec/normal',
-  \ 'command': "rspec",
-  \ 'cmdopt': "-l %{line('.')}",
-  \ 'exec': '%c %o %s',
-  \ 'filetype': 'rspec-result'
-  \}
+      \ 'type': 'rspec/normal',
+      \ 'command': "rspec",
+      \ 'cmdopt': "-l %{line('.')}",
+      \ 'exec': '%c %o %s',
+      \ 'filetype': 'rspec-result'
+      \}
 function! RSpecQuickrun()
   let b:quickrun_config = {'type' : 'rspec/bundle'}
 endfunction
@@ -419,6 +433,12 @@ let g:quickrun_config.html = {
       \ 'command'   : 'open',
       \ 'exec'      : '%c %s',
       \}
+let g:quickrun_config.diag = {
+      \ "outputter/buffer/close_on_empty" : 1,
+      \ 'command'   : 'blockdiag',
+      \ 'exec'      : '%c %s',
+      \}
+
 "------------------------------------
 " Pydiction
 "------------------------------------

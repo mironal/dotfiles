@@ -65,6 +65,7 @@ alias du="du -h"
 alias df="df -h"
 alias su="su -l"
 
+alias my-issue="ghi list --mine"
 
 # Customize to your needs...
 
@@ -99,6 +100,19 @@ fi
 if [ -e ~/dotfiles/z/z.sh ];then
     _Z_CMD=j
     source ~/dotfiles/z/z.sh
+fi
+
+if [ -d /usr/local/bin ];then
+    export PATH=/usr/local/bin:$PATH
+fi
+
+if [ -d ~/.rbenv/bin ];then
+    export PATH=~/.rbenv/bin:$PATH
+fi
+
+if which rbenv > /dev/null
+then
+    eval "$(rbenv init -)"
 fi
 
 # コマンドラインスタックを表示させる&C-qでやる
