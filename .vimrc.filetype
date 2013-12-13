@@ -1,0 +1,2 @@
+" Ssp (Scala Server Pages)
+au BufRead,BufNewFile *.ssp set filetype=html

@@ -3,7 +3,9 @@ source ~/dotfiles/.vimrc.bundle
 
 "基本設定
 source ~/dotfiles/.vimrc.basic
-"StatusLine設定
+"拡張子毎のfiletype設定
+source ~/dotfiles/.vimrc.filetype
+"BufReadStatusLine設定
 source ~/dotfiles/.vimrc.statusline
 "インデント設定
 source ~/dotfiles/.vimrc.indent
