@@ -8,12 +8,13 @@
   s = status
   br = branch
   m = merge
+  fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
 [core]
   editor = vim -c \"set fenc=utf-8\"
   precomposeunicode = true
   quotepath = false
   excludesfile = /Users/miro/.gitignore_global
-	commentchar = ^
+  commentchar = ^
 [push]
   default = simple
 [merge]
@@ -34,4 +35,8 @@
   diff = diff-highlight | less
 [include]
   path=~/dotfiles/gitconfig.local
+#driver for merging XCode project files
+[merge "mergepbx"]
+  name = XCode project files merger
+  driver = mergepbx %O %A %B
 

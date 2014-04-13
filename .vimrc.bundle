@@ -106,6 +106,7 @@ endif
   " neocomplcacheのsinpet補完
   "NeoBundle 'Shougo/neocomplcache-snippets-complete'
   NeoBundle 'Shougo/neosnippet'
+  NeoBundle 'Shougo/neosnippet-snippets'
 
   " for rsense
   "NeoBundle 'm2ym/rsense'
@@ -167,6 +168,9 @@ endif
   " Pydiction : Python用の入力補完
   "NeoBundle 'Pydiction'
 
+  " https://github.com/mattn/emmet-vim
+  NeoBundle 'mattn/emmet-vim'
+
   " ソースコード上のメソッド宣言、変数宣言の一覧を表示
   NeoBundle 'taglist.vim'
 
@@ -193,10 +197,14 @@ endif
   NeoBundle 'haml.zip'
 
   " JavaScript
-  NeoBundle 'JavaScript-syntax'
+  " NeoBundle 'JavaScript-syntax'
+  NeoBundle 'pangloss/vim-javascript'
 
   " jQuery
   NeoBundle 'jQuery'
+
+  " https://github.com/othree/html5.vim
+  NeoBundle 'othree/html5.vim'
 
   " nginx conf
   NeoBundle 'nginx.vim'
