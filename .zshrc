@@ -65,7 +65,8 @@ alias du="du -h"
 alias df="df -h"
 alias su="su -l"
 
-alias my-issue="ghi list --mine"
+alias myissue="ghi list --mine"
+alias openmyissue="ghi open -u mironal"
 
 # Customize to your needs...
 
@@ -143,10 +144,16 @@ function do_enter() {
       echo
       echo -e "\e[0;33m--- git status ---\e[0m"
       git status -sb
+      # プロンプトが2行だからもっかい echo
+      echo
   fi
   zle reset-prompt
   return 0
 }
 zle -N do_enter
 bindkey '^m' do_enter
+
+# go lang
+export GOPATH=$HOME/.go
+
 
