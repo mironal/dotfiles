@@ -37,6 +37,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/dotfiles/misc/agnoster_multiline.zsh-theme
 
 setopt nolistbeep
+setopt hist_ignore_space
 
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -67,6 +68,9 @@ alias su="su -l"
 
 alias myissue="ghi list --mine"
 alias openmyissue="ghi open -u mironal"
+alias issyuukan='git log --date=iso --after=last.monday --author=`git config --get user.name` --pretty=format:"#### %cd  %s" --shortstat --reverse --no-merges | sed -e "s/ +0900 //g" | sed -e "s/`date +"%Y"`-//g"'
+
+alias gpullpush="git pull upstream develop && git push origin develop"
 
 # Customize to your needs...
 
