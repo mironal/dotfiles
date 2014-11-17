@@ -72,6 +72,79 @@ alias issyuukan='git log --date=iso --after=last.monday --author=`git config --g
 
 alias gpullpush="git pull upstream develop && git push origin develop"
 
+function _gbr_desc_r() {
+    git config --get branch.$(git symbolic-ref --short HEAD).description
+}
+
+alias gbr_desc_r="_gbr_desc_r"
+
+function _gbr_desc_w() {
+    git branch --edit-description $(git symbolic-ref --short HEAD)
+}
+
+alias gbr_desc_w="_gbr_desc_w"
+
+function _gbr_desc_a() {
+    git config --add branch.$(git symbolic-ref --short HEAD).description
+}
+alias gbr_desc_a="_gbr_desc_a"
+
+
+#
+# 指定した issue の内容で branch の description を作って print する
+#
+function _print_issue_description() {
+
+    if [ -z $1 ]; then
+        echo "gpid <issue number>"
+        return 1
+    fi
+
+    if ! which ghi > /dev/null
+    then
+
+        echo "Please install ghi command"
+        echo "https://github.com/stephencelis/ghi"
+        return 1
+    fi
+
+    ghi show $1 | sed "2,3d" | sed -E "s/(^#[0-9]+): (.+)$/\2 closed \1/g" | awk '{print $0}; END{print "----\n\n# 概要\n\n# 変更点\n\n# チェックして欲しい所\n"}'
+}
+
+alias gpid="_print_issue_description"
+
+#
+# 指定した名前のブランチを作って、指定した issue の内容で description を初期化する(以下の様な感じ)
+#
+# ```
+# issue のタイトル closed #<issue番号>
+#
+# isseu の内容
+#
+# ----
+#
+# # 概要
+#
+# # 変更点
+#
+# # チェックして欲しい所
+#
+# ```
+#
+# _git_checkout_new_branch "new-branch-name" "issue-number"
+# ex) _git_checkout_new_branch hogehoge 1234
+function _git_checkout_new_branch() {
+
+    if [ -z $1 ] || [ -z $2 ]; then
+        echo "gcnb new-branch-name issue-number"
+        return 1
+    fi
+
+    git checkout -b $1 && gbr-desc-a "$(_print_issue_description $2)" && gbr-desc-w
+}
+
+alias gcnb="_git_checkout_new_branch"
+
 # Customize to your needs...
 
 if [ -f ~/.zsh_local ]; then
@@ -113,6 +186,11 @@ fi
 
 if [ -d ~/.rbenv/bin ];then
     export PATH=~/.rbenv/bin:$PATH
+fi
+
+if [ -d ~/bin ];then
+    export PATH=~/bin:$PATH
+
 fi
 
 if which rbenv > /dev/null

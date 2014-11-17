@@ -14,7 +14,6 @@
   precomposeunicode = true
   quotepath = false
   excludesfile = /Users/miro/.gitignore_global
-  commentchar = ^
 [push]
   default = simple
 [merge]
