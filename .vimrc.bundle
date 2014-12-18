@@ -303,6 +303,10 @@ endif
   " vimからGit操作する
   NeoBundle 'tpope/vim-fugitive'
 
+  " git commit したら開く vim を最高にする
+  " https://github.com/rhysd/committia.vim
+  NeoBundle 'rhysd/committia.vim'
+
   " ステータスラインをカッコよくする
   " NeoBundle 'Lokaltog/vim-powerline'
 
