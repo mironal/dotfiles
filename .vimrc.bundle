@@ -15,41 +15,15 @@ endif
 " call vundle#rc()
 
 " Edit {{{
-  " NERD_commenter.vim :最強コメント処理 (<Leader>c<space>でコメントをトグル)
-  "NeoBundle 'scrooloose/nerdcommenter.git'
-
-  " 自動閉じタグ
-  " NeoBundle 'yuroyoro/vim-autoclose'
-
-  " -- でメソッドチェーン整形
-  "NeoBundle 'c9s/cascading.vim'
-
-  " visually indent guide
-  "NeoBundle 'nathanaelkane/vim-indent-guides'
-
-  " XMLとかHTMLとかの編集機能を強化する
-  "NeoBundle 'xmledit'
 
   " Align : 高機能整形・桁揃えプラグイン
   NeoBundle 'Align'
 
-  " フィルタリングと整形
-  "NeoBundle 'godlygeek/tabular'
-
-  " マルチバイト対応の整形
-  "NeoBundle 'h1mesuke/vim-alignta'
-
   " YankRing.vim : ヤンクの履歴を管理し、順々に参照、出力できるようにする
   NeoBundle 'YankRing.vim'
 
-  " undo履歴を追える (need python support)
-  "NeoBundle 'Gundo'
-
   " surround.vim : テキストを括弧で囲む／削除する
   NeoBundle 'surround.vim'
-
-  " smartchr.vim : ==などの前後を整形
-  "NeoBundle 'smartchr'
 
   " vim-operator-user : 簡単にoperatorを定義できるようにする
   NeoBundle 'operator-user'
@@ -57,116 +31,30 @@ endif
   " operator-camelize : camel-caseへの変換
   NeoBundle 'operator-camelize'
 
-  " operator-replace : yankしたものでreplaceする
-  "NeoBundle 'operator-replace'
-
-  " textobj-user : 簡単にVimエディタのテキストオブジェクトをつくれる
-  "NeoBundle 'textobj-user'
-
-  " vim-textobj-syntax : syntax hilightされたものをtext-objectに
-  "NeoBundle 'kana/vim-textobj-syntax.git'
-
-  " vim-textobj-plugins : いろんなものをtext-objectにする
-  "NeoBundle 'thinca/vim-textobj-plugins.git'
-
-  " vim-textobj-lastpat : 最後に検索されたパターンをtext-objectに
-  "NeoBundle 'kana/vim-textobj-lastpat.git'
-
-  " vim-textobj-indent : インデントされたものをtext-objectに
-  "NeoBundle 'kana/vim-textobj-indent.git'
-
-  " vim-textobj-function : 関数の中身をtext-objectに
-  "NeoBundle 'kana/vim-textobj-function.git'
-
-  " vim-textobj-fold : 折りたたまれたアレをtext-objectに
-  " NeoBundle 'kana/vim-textobj-fold.git'
-  "NeoBundle 'textobj-rubyblock'
-
-  " vim-textobj-entire : buffer全体をtext-objectに
-  "NeoBundle 'textobj-entire'
-
-  " 「foo」 or 【bar】などをtext-objectに
-  "NeoBundle 'textobj-jabraces'
-
-  " 改造したmonday.vim(git rebase -i とかtrue/falseとか)
-  " NeoBundle 'yuroyoro/monday'
-
-  " <C-a>でtrue/false切替。他色々
-  "NeoBundle 'taku-o/vim-toggle'
 
 " }}}
 
 " Completion {{{
-  " 補完 autocomplpop.vim : insertmodeで自動で補完をpopup
-  " NeoBundle 'AutoComplPop'
 
-  " 補完 neocomplcache.vim : 究極のVim的補完環境
+" 補完 neocomplcache.vim : 究極のVim的補完環境
   NeoBundle 'Shougo/neocomplcache'
 
   " neocomplcacheのsinpet補完
-  "NeoBundle 'Shougo/neocomplcache-snippets-complete'
   NeoBundle 'Shougo/neosnippet'
   NeoBundle 'Shougo/neosnippet-snippets'
 
-  " for rsense
-  "NeoBundle 'm2ym/rsense'
-  "NeoBundle 'taichouchou2/vim-rsense'
-
-  " rubyでrequire先を補完する
-  " NeoBundle 'ujihisa/neco-ruby'
-
-  " A neocomplcache plugin for English, using look command
-  " NeoBundle 'ujihisa/neco-look'
 " }}}
 
 " Searching/Moving{{{
-  " smooth_scroll.vim : スクロールを賢く
-  "NeoBundle 'Smooth-Scroll'
-
-  " vim-smartword : 単語移動がスマートな感じで
-  "NeoBundle 'smartword'
-
-  " camelcasemotion : CamelCaseやsnake_case単位でのワード移動
-  "NeoBundle 'camelcasemotion'
-
-  " <Leader><Leader>w/fなどで、motion先をhilightする
-  "NeoBundle 'EasyMotion'
-
-  " matchit.vim : 「%」による対応括弧へのカーソル移動機能を拡張
-  "NeoBundle 'matchit.zip'
-
-  " ruby用のmatchit拡張
-  "NeoBundle 'ruby-matchit'
 
   " grep.vim : 外部のgrep利用。:Grepで対話形式でgrep :Rgrepは再帰
   NeoBundle 'grep.vim'
-
-  " eregex.vim : vimの正規表現をrubyやperlの正規表現な入力でできる :%S/perlregex/
-  "NeoBundle 'eregex.vim'
-
-  " open-browser.vim : カーソルの下のURLを開くor単語を検索エンジンで検索
-  "NeoBundle 'tyru/open-browser.vim'
 
 " }}}
 
 " Programming {{{
   " quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
   NeoBundle 'thinca/vim-quickrun'
-
-  " perldocやphpmanual等のリファレンスをvim上で見る
-  "NeoBundle 'thinca/vim-ref'
-
-  " SQLUtilities : SQL整形、生成ユーティリティ
-  "NeoBundle 'SQLUtilities'
-
-  " vim-ruby : VimでRubyを扱う際の最も基本的な拡張機能
-  "NeoBundle 'vim-ruby/vim-ruby'
-
-  " rails.vim : rails的なアレ
-  "NeoBundle 'tpope/vim-rails'
-
-  " Pydiction : Python用の入力補完
-  "NeoBundle 'Pydiction'
 
   " https://github.com/mattn/emmet-vim
   NeoBundle 'mattn/emmet-vim'
@@ -176,9 +64,6 @@ endif
 
   " ファイルを超えてタグジャンブ
   NeoBundle 'vim-scripts/tagexplorer.vim'
-
-  " エラーがある場所をhilight
-  "NeoBundle 'errormarker.vim'
 
   " NERDTree : ツリー型エクスプローラ
   NeoBundle 'The-NERD-tree'
@@ -197,7 +82,6 @@ endif
   NeoBundle 'haml.zip'
 
   " JavaScript
-  " NeoBundle 'JavaScript-syntax'
   NeoBundle 'pangloss/vim-javascript'
 
   " jQuery
@@ -234,20 +118,12 @@ endif
   NeoBundle 'dag/vim2hs'
   NeoBundle 'kana/vim-filetype-haskell'
 
-  " syntax checking plugins exist for eruby, haml, html, javascript, php, python, ruby and sass.
-  "NeoBundle 'scrooloose/syntastic'
 " }}}
 
 " Buffer {{{
   " DumbBuf.vim : quickbufっぽくbufferを管理。 "<Leader>b<Space>でBufferList
   NeoBundle 'DumbBuf'
 
-  " minibufexpl.vim : タブエディタ風にバッファ管理ウィンドウを表示
-  "NeoBundle 'minibufexpl.vim'
-
-
-  " vtreeexplorer.vim : ツリー状にファイルやディレクトリの一覧を表示
-  " NeoBundle 'vtreeexplorer'
 " }}}
 
 
@@ -270,35 +146,8 @@ endif
   " renamer.vim : ファイルのリネームを一括で行うにくいやつ
   NeoBundle 'renamer.vim'
 
-  " vim-altercmd : Ex command拡張
-  "NeoBundle 'tyru/vim-altercmd'
-
-  " vim Interface to Web API
-  "NeoBundle 'mattn/webapi-vim'
-
-  " cecutil.vim : 他のpluginのためのutillity1
-  "NeoBundle 'cecutil'
-
-  " urilib.vim : vim scriptからURLを扱うライブラリ
-  "NeoBundle 'tyru/urilib.vim'
-
-  " ステータスラインに顔文字を表示
-  "NeoBundle 'mattn/hahhah-vim'
-
-  " utillity
-  "NeoBundle 'L9'
-
-  " Buffer管理のLibrary
-  "NeoBundle 'thinca/vim-openbuf'
-
   " vimdoc 日本語
   NeoBundle 'yuroyoro/vimdoc_ja'
-
-  " vim上のtwitter client
-  "NeoBundle 'TwitVim'
-
-  " Lingrのclient
-  "NeoBundle 'tsukkee/lingr-vim'
 
   " vimからGit操作する
   NeoBundle 'tpope/vim-fugitive'
@@ -307,16 +156,7 @@ endif
   " https://github.com/rhysd/committia.vim
   NeoBundle 'rhysd/committia.vim'
 
-  " ステータスラインをカッコよくする
-  " NeoBundle 'Lokaltog/vim-powerline'
-
   NeoBundle 'bling/vim-airline'
-
-  " Redmine on Vim
-  "NeoBundle 'mattn/vim-metarw-redmine'
-
-  " A framework to read/write fake:path
-  "NeoBundle 'kana/vim-metarw'
 
   " https://github.com/airblade/vim-gitgutter
   NeoBundle 'airblade/vim-gitgutter'
