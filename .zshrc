@@ -218,8 +218,8 @@ function do_enter() {
     zle accept-line
     return 0
   fi
-  echo
   ls
+  echo
   # ↓おすすめ
   # ls_abbrev
   if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = 'true' ]; then
