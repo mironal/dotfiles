@@ -239,3 +239,6 @@ bindkey '^m' do_enter
 export GOPATH=$HOME/.go
 
 
+
+# added by travis gem
+[ -f /Users/miro/.travis/travis.sh ] && source /Users/miro/.travis/travis.sh
