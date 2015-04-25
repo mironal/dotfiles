@@ -37,3 +37,8 @@ set helpfile=$VIMRUNTIME/doc/help.txt
 " ファイルタイプ判定をon
 filetype plugin on
 
+" window を移動した時に checktime
+augroup vimrc-checktime
+  autocmd!
+  autocmd WinEnter * checktime
+augroup END
