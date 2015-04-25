@@ -68,9 +68,10 @@ alias su="su -l"
 
 alias myissue="ghi list --mine"
 alias openmyissue="ghi open -u mironal"
-alias issyuukan='git log --date=iso --after=last.monday --author=`git config --get user.name` --pretty=format:"#### %cd  %s" --shortstat --reverse --no-merges | sed -e "s/ +0900 //g" | sed -e "s/`date +"%Y"`-//g"'
 
 alias gpullpush="git pull upstream develop && git push origin develop"
+
+alias tac="gtac"
 
 function _gbr_desc_r() {
     git config --get branch.$(git symbolic-ref --short HEAD).description
@@ -242,3 +243,19 @@ export GOPATH=$HOME/.go
 
 # added by travis gem
 [ -f /Users/miro/.travis/travis.sh ] && source /Users/miro/.travis/travis.sh
+
+# unicode 対応 watch
+# https://excess.org/article/2009/07/watch1-bash-unicode/
+botch() {
+    while true; do
+        (echo -en '\033[H'
+        CMD="$@"
+        bash -c "$CMD" | while read LINE; do
+        echo -n "$LINE"
+        echo -e '\033[0K'
+    done
+    echo -en '\033[J') | tac | tac
+    sleep 2
+done
+}
+
